@@ -1,18 +1,28 @@
-email = "test@example.com"
-password = "password"
+EMAIL = "test@example.com"
+PASSWORD = "password"
 
 User.destroy_all
+Post.destroy_all
 
 user1 = User.create!(email: "koba@example.com", password: "password")
 user2 = User.create!(email: "gori@example.com", password: "password")
 user3 = User.create!(email: "mori@example.com", password: "password")
 
-user2.Post.create!(content: "沖縄そば")
-user1.Post.create!(content: "海ぶどう")
-user3.Post.create!(content: "ゴーヤチャンプルー")
-user3.Post.create!(content: "サーターアンダーギー")
-user1.Post.create!(content: "タコライス")
+post1 = user2.posts.create!(content: "沖縄そば")
+post2 = user1.posts.create!(content: "海ぶどう")
+post3 = user3.posts.create!(content: "ゴーヤチャンプルー")
+post4 = user3.posts.create!(content: "サーターアンダーギー")
+post5 = user1.posts.create!(content: "タコライス")
 
-User.create!(email: email, password: password)
+post1.likes.create!(user_id: user1.id)
+post1.likes.create!(user_id: user3.id)
+post2.likes.create!(user_id: user2.id)
+post3.likes.create!(user_id: user1.id)
+post4.likes.create!(user_id: user1.id)
+post4.likes.create!(user_id: user2.id)
+post5.likes.create!(user_id: user3.id)
+
+
+User.create!(email: EMAIL, password: PASSWORD)
 
 puts "初期データの投入に成功しました！"
