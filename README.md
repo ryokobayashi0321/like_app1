@@ -1,24 +1,24 @@
-# README
+# `モデルの関連付けの練習`　1回目
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## `モデルの関連付け（１対多）`を実装しました。　
 
-Things you may want to cover:
+- `init`を設定
+- .gitignore に `.DS_Store と /vendor/bundle` を追加
+- `ログイン機能`の実装・`日本語化`
+- 関連付けの基礎と`１対多の関連付け`
+- `データ`の変更、追加
+- `メッセージの一覧表示`を実装
+- `メッセージ新規投稿機能`を実装
+- `メッセージの詳細表示機能`を実装
+- `メッセージの削除機能`を実装
+- `メッセージの編集機能`を実装
+- 全体の修正
 
-* Ruby version
+## `モデルの関連付け（多対多）`を実装しました。　
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- `中間テーブル`の作成
+- `多対多の関連付け`
+- `詳細ページに「いいね」機能`を実装
+- `一覧ページに「いいね」機能`を実装
+- `「いいね」機能を非同期`に実装(js.erbを使用)
+- `「いいね」数の表示`を実装
